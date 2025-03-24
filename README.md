@@ -17,13 +17,15 @@ This functionality is implemented in two main Verilog files:
 
 **Understanding Loopback in top.v**
 
-Module Declaration
+1. Module Declaration
 
-The top module defines inputs and outputs for UART and LED indicators. The main signals involved are the system clock, active-low reset, UART receive and transmit pins, and an RGB LED output for status indication.
-Internal Oscillator and Clock Management
+The top module defines inputs and outputs for UART and LED indicators. The main signals involved are - the system clock, active-low reset, UART receive and transmit pins, and an RGB LED output for status indication.
+
+2. Internal Oscillator and Clock Management
 
 An internal oscillator generates a stable clock signal used for UART operations. A frequency divider reduces the high-frequency clock to a lower frequency suitable for serial communication.
-UART Loopback Logic
+
+3.UART Loopback Logic
 
 The core loopback functionality is implemented using an instance of the UART transmitter and receiver module. The received data is directly assigned as the transmit data, ensuring that any data received is immediately sent back. Transmission is triggered whenever new data is received, completing the loopback process.
 Visual Feedback with RGB LED
@@ -32,9 +34,10 @@ The first three bits of the received UART data control an RGB LED. This provides
 
 **Understanding uart_trx.v (UART Transmission & Reception)**
 
-UART Transmitter
+1. UART Transmitter
 
 The transmitter takes parallel data and converts it into a serial data stream. It includes a start bit, 8-bit data, and a stop bit. A shift register is used to send one bit at a time.
-UART Receiver
+
+2. UART Receiver
 
 The receiver detects the start bit and shifts in the incoming serial data. Once all bits are received, the data is stored and marked as available for processing. This allows the received data to be looped back to the transmitter.
