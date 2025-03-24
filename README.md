@@ -27,10 +27,11 @@ This functionality is implemented in two main Verilog files:
 
 3. UART Loopback Logic
 
-  The core loopback functionality is implemented using an instance of the UART transmitter and receiver module. The received data is directly assigned as the transmit data, ensuring that   any data received is immediately sent back. Transmission is triggered whenever new data is received, completing the loopback process.
-  Visual Feedback with RGB LED
+    The core loopback functionality is implemented using an instance of the UART transmitter and receiver module. The received data is directly assigned as the transmit data, ensuring        that any data received is immediately sent back. Transmission is triggered whenever new data is received, completing the loopback process.
 
-The first three bits of the received UART data control an RGB LED. This provides a visual indication of incoming data, helping to verify UART activity.
+4. Visual Feedback with RGB LED
+
+   The first three bits of the received UART data control an RGB LED. This provides a visual indication of incoming data, helping to verify UART activity.
 
 **Understanding uart_trx.v (UART Transmission & Reception)**
 
