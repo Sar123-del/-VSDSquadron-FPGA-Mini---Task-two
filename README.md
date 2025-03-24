@@ -46,7 +46,23 @@ This functionality is implemented in two main Verilog files:
    **Conclusion**
   
    The loopback mechanism ensures that any data sent to the FPGA via UART is echoed back to the sender. Additionally, the first three bits of received data are displayed on an RGB LED       for visual confirmation.
-   
+
+  **Step -2 Visual Desription**
+  
    A block diagram illustrating the UART loopback architecture
+   ![Image](https://github.com/user-attachments/assets/7bf3f3f8-b1bf-4c3d-a794-7cf7822c7e11)
+   The key components of the block diagram are -
+   Clock – Generates a system clock signal for synchronization.
+
+1. UART Receiver – Receives serial data (RX) and converts it into parallel format.
+
+2. Loopback Block – Directly connects the received data to the transmitter, ensuring the same data is sent back.
+
+3. UART Transmitter – Converts parallel data back into serial format and transmits it (TX).
+
+4. RGB LED – Displays the first three bits of the received data as a visual indication of UART activity.
+
+5. Arrows – Indicate the direction of data flow from RX to Receiver, through the Loopback Block, to the Transmitter, and out as TX. The LED is connected to the Receiver for visual feedback.
+   
    
    
