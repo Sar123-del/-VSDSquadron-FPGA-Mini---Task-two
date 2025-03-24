@@ -11,9 +11,9 @@ The uart_loopback project in the VSDSquadron_FM repository implements a UART (Un
 
 This functionality is implemented in two main Verilog files:
 
-top.v - The top-level module integrating UART communication, clock management, and RGB LED status indicators.
+*top.v* - The top-level module integrating UART communication, clock management, and RGB LED status indicators.
 
- uart_trx.v - The UART transmitter and receiver module that handles serial communication.
+ *uart_trx.v* - The UART transmitter and receiver module that handles serial communication.
 
 **Understanding Loopback in top.v**
 
@@ -31,6 +31,7 @@ Visual Feedback with RGB LED
 The first three bits of the received UART data control an RGB LED. This provides a visual indication of incoming data, helping to verify UART activity.
 
 **Understanding uart_trx.v (UART Transmission & Reception)**
+
 UART Transmitter
 
 The transmitter takes parallel data and converts it into a serial data stream. It includes a start bit, 8-bit data, and a stop bit. A shift register is used to send one bit at a time.
