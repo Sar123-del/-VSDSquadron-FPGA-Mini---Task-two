@@ -42,3 +42,7 @@ This functionality is implemented in two main Verilog files:
 2. UART Receiver
 
    The receiver detects the start bit and shifts in the incoming serial data. Once all bits are received, the data is stored and marked as available for processing. This allows the          received data to be looped back to the transmitter.
+
+   **Conclusion**
+  
+   The loopback mechanism ensures that any data sent to the FPGA via UART is echoed back to the sender. Additionally, the first three bits of received data are displayed on an RGB LED       for visual confirmation.
