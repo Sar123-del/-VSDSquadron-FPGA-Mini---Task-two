@@ -46,3 +46,7 @@ This functionality is implemented in two main Verilog files:
    **Conclusion**
   
    The loopback mechanism ensures that any data sent to the FPGA via UART is echoed back to the sender. Additionally, the first three bits of received data are displayed on an RGB LED       for visual confirmation.
+   
+   A block diagram illustrating the UART loopback architecture
+   
+   
